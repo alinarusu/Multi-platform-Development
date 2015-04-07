@@ -1,0 +1,27 @@
+Student: Rusu Alina-Nicoleta
+Tema1 - Multi platform development
+
+
+Tema a fost implementata exclusiv in C si a fost testata pe masinile virtuale
+puse la dispozitie de catre echipa de SO. De asemenea, am verificat tema
+impotriva memory leak-urilor cu valgrind pentru toate testele.
+
+Tema este formata din 3 fisiere .c:
+	hash.c - fisierul ce contine functia hash din schelet
+	tema1.c - contine functia main si parserul pentru input
+	hashtable.c - contine implementarea efectiva a unui hash-table
+
+Pentru bucketuri am ales o structura de date de tipul "lista simplu inlantuita
+fara santinela".
+
+Inserarea o fac mereu la final, asa cum este specificat in enunt, desi ar fi
+fost mult mai eficient sa fie facuta la inceput. Functiile din hash_table.c
+sunt in mare parte in corespondenta de 1 la 1 cu comenzile care se pot citi din
+fisierele de input.
+
+Resize double si resize halve, creeaza pur si simplu o noua tabela cu o alta
+dimensiune, se parcurg toate elementele vechii tabele si se insereaza unul cate
+unul in tabela noua. La final de tot se dezaloca vechea tabela si se
+inlocuieste cu cea noua.
+
+Timpul de rulare pentru toate cele 9 teste este sub o secunda.
